@@ -30,7 +30,8 @@ class HomeController extends Controller {
 
   async analysis() {
     const ctx = this.ctx;
-    const data = ctx.request.body;
+    const req = ctx.request.body;
+    console.log('req.content: ' + req.content);
     // 示例：请求一个 npm 模块信息
     const result = await ctx.curl('http://101.132.174.1:8082/analysis/', {
       // 必须指定 method
@@ -38,7 +39,7 @@ class HomeController extends Controller {
       // 通过 contentType 告诉 HttpClient 以 JSON 格式发送
       contentType: 'json',
       data: {
-        sentence: data.content,
+        sentence: req.content.toString(),
       },
       // 明确告诉 HttpClient 以 JSON 格式处理返回的响应 body
       dataType: 'json',
