@@ -1,0 +1,1 @@
+"start": "egg-scripts start --daemon --title=egg-server-cm-weapp --https.key=/etc/nginx/2_www.frontend.wang.key --https.cert=/etc/nginx/1_www.frontend.wang_bundle.crt",
