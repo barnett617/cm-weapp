@@ -1,13 +1,17 @@
 'use strict';
 
-module.exports = appInfo => {
-  const config = exports = {};
+// module.exports = appInfo => {
+//   const config = exports = {};
 
-  // use for cookie sign key, should change to your own and keep security
-  config.keys = appInfo.name + '_1545272223872_3297';
+//   // use for cookie sign key, should change to your own and keep security
+//   config.keys = appInfo.name + '_1545272223872_3297';
 
-  // add your config here
-  config.middleware = [];
+//   // add your config here
+//   config.middleware = [];
 
-  return config;
+//   return config;
+// };
+
+exports.security = {
+  csrf: false,
 };

@@ -2,6 +2,7 @@
 #!/bin/scp
 #!/usr/bin/expect -f
 npm run build
+rf -rf ./release.tgz
 tar -zcvf ./release.tgz .
 echo "**************** build completed ****************"
 expect -c "
